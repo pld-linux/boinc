@@ -1,4 +1,5 @@
-Summary:	boinc is a bash script for unix like systems.
+Summary:	boinc is a bash script used to manage boinc client
+Summary(pl):	boinc to napisany w bash skrypt do zarz±dzanie klientem boinc
 Name:		boinc
 Version:	1.5
 Release:	0.1
@@ -14,7 +15,14 @@ URL:		http://phileimer.9online.fr/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-boinc is a bash script for unix like systems.
+boinc is a bash script for unix like systems used to manage client of
+the boinc project (Berkeley Open Infrastructure for Network
+Computing).
+
+%description -l pl
+boinc to napisany w bashu skrypt dla systemów uniksowych s³u¿±cy do
+zarz±dzania klientem projektu boinc (Berkeley Open Infrastructure for
+Network Computing).
 
 %prep
 %setup -q
@@ -32,6 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES
+%doc CHANGES README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/boinc
