@@ -31,7 +31,6 @@ Network Computing).
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_datadir}/boinc
 
 install boinc $RPM_BUILD_ROOT%{_bindir}
 
@@ -42,4 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES README
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/boinc
