@@ -15,13 +15,13 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-boinc is a bash script for unix like systems used to manage client of
-the boinc project (Berkeley Open Infrastructure for Network
+boinc is a bash script for unix like systems used to manage client 
+of the BOINC project (Berkeley Open Infrastructure for Network 
 Computing).
 
 %description -l pl
 boinc to napisany w bashu skrypt dla systemów uniksowych s³u¿±cy do
-zarz±dzania klientem projektu boinc (Berkeley Open Infrastructure for
+zarz±dzania klientem projektu BOINC (Berkeley Open Infrastructure for
 Network Computing).
 
 %prep
