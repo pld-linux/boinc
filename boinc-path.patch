@@ -1,6 +1,6 @@
 --- boinc	2004-10-17 20:09:04.853257320 +0000
-+++ boinc.new	2004-10-17 20:14:59.922278624 +0000
-@@ -11,12 +11,12 @@
++++ boinc.new	2004-10-17 22:00:58.980554824 +0000
+@@ -11,15 +11,15 @@
  # Parameters to be set before using the script
  
  # The path where BOINC state files reside
@@ -14,4 +14,8 @@
 +BOINC_BIN_PATH=/usr/bin
  
  # LOG file for BOINC, with its absolute path
- BOINC_LOG_FILE=$BOINC_PATH/boinc.log
+-BOINC_LOG_FILE=$BOINC_PATH/boinc.log
++BOINC_LOG_FILE=/var/log/boinc.log
+ 
+ # Options to give to the client when it starts
+ # See the documentation of the BOINC client
