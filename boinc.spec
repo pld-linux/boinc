@@ -1,5 +1,5 @@
-Summary:	boinc is a bash script used to manage boinc client
-Summary(pl):	boinc to napisany w bash skrypt do zarz±dzanie klientem boinc
+Summary:	boinc - a bash script used to manage boinc client
+Summary(pl):	boinc - napisany w bashu skrypt do zarz±dzanie klientem boinc
 Name:		boinc
 Version:	1.5
 Release:	0.1
@@ -9,9 +9,9 @@ Source0:	http://phileimer.9online.fr/%{name}-%{version}.tar.bz2
 # Source0-md5:	24a148365107dae762cbf76bc4cac8b4
 # Source0-size:	12859
 Patch0:		%{name}-path.patch
+URL:		http://phileimer.9online.fr/
 Requires:	setiathome
 BuildArch:	noarch
-URL:		http://phileimer.9online.fr/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,10 +30,10 @@ Network Computing).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT/%{_bindir}
+install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_datadir}/boinc
-install boinc $RPM_BUILD_ROOT/%{_bindir}
+
+install boinc $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
