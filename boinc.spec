@@ -1,5 +1,5 @@
 Summary:	boinc - a bash script used to manage boinc client
-Summary(pl):	boinc - napisany w bashu skrypt do zarz±dzanie klientem boinc
+Summary(pl):	boinc - napisany w bashu skrypt do zarz±dzania klientem boinc
 Name:		boinc
 Version:	1.5
 Release:	0.1
