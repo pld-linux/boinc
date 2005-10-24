@@ -1,12 +1,12 @@
 Summary:	boinc - a bash script used to manage boinc client
 Summary(pl):	boinc - napisany w bashu skrypt do zarz±dzania klientem boinc
 Name:		boinc
-Version:	1.9
+Version:	1.10
 Release:	0.1
 License:	GPL
 Group:		Applications
 Source0:	http://phileimer.9online.fr/%{name}-%{version}.tar.bz2
-# Source0-md5:	40b33af39a215cac00e6d71b3eeed94c
+# Source0-md5:	85907bd0b9b3527ee90ee73ad2d4ea8d
 Patch0:		%{name}-path.patch
 URL:		http://phileimer.9online.fr/
 Requires:	setiathome
