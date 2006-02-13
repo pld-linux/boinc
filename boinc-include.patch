@@ -1,0 +1,10 @@
+--- boinc-5.3.19/client/cpu_sched.C.orig	2006-02-13 22:17:39.459535000 +0100
++++ boinc-5.3.19/client/cpu_sched.C	2006-02-13 22:17:53.628420500 +0100
+@@ -19,6 +19,7 @@
+ 
+ #include "client_msgs.h"
+ #include "client_state.h"
++#include <cassert>
+ 
+ using std::vector;
+ 
