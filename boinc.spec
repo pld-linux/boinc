@@ -8,6 +8,7 @@
 #	- find out license
 
 Summary:	BOINC - Berkeley Open Infrastructure for Network Computing
+Summary(pl):	BOINC - otwarta infrastruktura Berkeley do obliczeñ sieciowych
 Name:		boinc
 Version:	5.3.19
 Release:	0.1
@@ -20,16 +21,20 @@ Source1:	http://phileimer.9online.fr/%{name}-1.10.tar.bz2
 Patch0:		%{name}-include.patch
 Patch1:		%{name}-path.patch
 URL:		http://phileimer.9online.fr/
+BuildRequires:	curl-devel
 BuildRequires:	glut-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	curl-devel
 BuildRequires:	wxWidgets-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-BOINC is a software platform for distributed computing using volunteered
-computer resources.
+BOINC is a software platform for distributed computing using
+volunteered computer resources.
 
+%description -l pl
+BOINC (Berkeley Open Infrastructure for Network Computing) to
+platforma programowa do rozproszonych obliczeñ przy u¿yciu zasobów
+komputerowych ochotników.
 
 %package script
 Summary:	boinc - a bash script used to manage boinc client
@@ -53,13 +58,11 @@ Network Computing).
 mv clientgui/BOINCDial{u,U}pManager.h
 
 %build
-#%%{__gettextize}
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-cp -f /usr/share/automake/config.sub .
 %configure \
 	--enable-static \
 	--enable-shared \
@@ -75,9 +78,6 @@ cp -f /usr/share/automake/config.sub .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
-#install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 #install boinc $RPM_BUILD_ROOT%{_bindir}
 
 %clean
-#rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
