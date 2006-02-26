@@ -2,8 +2,11 @@
 #	- check for BR-s
 #	- check configure options
 #	- create devel and static subpackages
+#	- package boinc script into separate package
+#	- package BOINC server in separate package
 #	- build files section
 #	- maybe BOINC.spec
+#	- find out license
 #	- fix linking for amd64 arch
 
 Summary:	BOINC - Berkeley Open Infrastructure for Network Computing
@@ -18,7 +21,8 @@ Source0:	%{name}-%{version}.tar.gz
 Source1:	http://phileimer.9online.fr/%{name}-1.10.tar.bz2
 # Source1-md5:	85907bd0b9b3527ee90ee73ad2d4ea8d
 Patch0:		%{name}-include.patch
-Patch1:		%{name}-path.patch
+Patch1:		%{name}-Makefile.am.patch
+Patch2:		%{name}-path.patch
 URL:		http://phileimer.9online.fr/
 BuildRequires:	curl-devel
 BuildRequires:	glut-devel
@@ -55,7 +59,9 @@ Network Computing).
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 mv clientgui/BOINCDial{u,U}pManager.h
+mv clientgui/BOINCDial{u,U}pManager.cpp
 
 %build
 %{__libtoolize}
