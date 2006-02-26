@@ -2,10 +2,9 @@
 #	- check for BR-s
 #	- check configure options
 #	- create devel and static subpackages
-#	- package boinc script into separate package
 #	- build files section
 #	- maybe BOINC.spec
-#	- find out license
+#	- fix linking for amd64 arch
 
 Summary:	BOINC - Berkeley Open Infrastructure for Network Computing
 Summary(pl):	BOINC - otwarta infrastruktura Berkeley do obliczeñ sieciowych
@@ -25,6 +24,7 @@ BuildRequires:	curl-devel
 BuildRequires:	glut-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	wxWidgets-devel
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
