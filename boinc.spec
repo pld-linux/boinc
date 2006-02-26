@@ -8,6 +8,7 @@
 #	- maybe BOINC.spec
 #	- find out license
 #	- fix linking for amd64 arch
+#	- wxGTK2-devel or wxGTK2-unicode-devel or wxGTK2-univ-devel or wxGTK2-univ-unicode-devel ??
 
 Summary:	BOINC - Berkeley Open Infrastructure for Network Computing
 Summary(pl):	BOINC - otwarta infrastruktura Berkeley do obliczeñ sieciowych
@@ -24,11 +25,18 @@ Patch0:		%{name}-include.patch
 Patch1:		%{name}-Makefile.am.patch
 Patch2:		%{name}-path.patch
 URL:		http://phileimer.9online.fr/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	curl-devel
 BuildRequires:	glut-devel
+BuildRequires:	libjpeg-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
+BuildRequires:	mysql-devel
+BuildRequires:	rpm-pythonprov
 BuildRequires:	wxWidgets-devel
-ExclusiveArch:	%{ix86}
+BuildRequires:	wxGTK2-devel
+ExclusiveArch:	%{ix86} amd64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
