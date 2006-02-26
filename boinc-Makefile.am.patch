@@ -1,0 +1,10 @@
+--- boinc-5.3.19/clientgui/Makefile.am.orig	2006-02-14 16:11:42.577809500 +0100
++++ boinc-5.3.19/clientgui/Makefile.am	2006-02-14 16:12:06.747320000 +0100
+@@ -29,6 +29,7 @@
+     BOINCTaskBar.cpp \
+     BOINCTaskCtrl.cpp \
+     DlgAbout.cpp \
++    BOINCDialUpManager.cpp \
+     DlgDialupCredentials.cpp \
+     DlgGenericMessage.cpp \
+     DlgOptions.cpp \
