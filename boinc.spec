@@ -20,7 +20,7 @@ Group:		Applications
 # Source generated from:
 # cvs -d :pserver:anonymous:@alien.ssl.berkeley.edu:/home/cvs/cvsroot checkout -r boinc_core_release_5_3_22 boinc
 Source0:	%{name}-%{version}.tar.gz
-# Source0-md5:	96281927b4f4288db389d58fc548c83b
+# Source0-md5:	c2a9af4f22e37b5a44a3ca45aa7eb843
 Source1:	http://phileimer.9online.fr/%{name}-1.10.tar.bz2
 # Source1-md5:	85907bd0b9b3527ee90ee73ad2d4ea8d
 Patch0:		%{name}-include.patch
