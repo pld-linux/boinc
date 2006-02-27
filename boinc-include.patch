@@ -8,3 +8,14 @@
  
  using std::vector;
  
+--- boinc-5.3.22/clientgui/MainFrame.cpp.orig	2006-02-27 12:28:32.619809500 +0000
++++ boinc-5.3.22/clientgui/MainFrame.cpp	2006-02-27 12:29:43.216221500 +0000
+@@ -31,7 +31,7 @@
+ #include "MainFrame.h"
+ #include "Events.h"
+ #include "BOINCBaseView.h"
+-#include "BOINCDialupManager.h"
++#include "BOINCDialUpManager.h"
+ #include "ViewProjects.h"
+ #include "ViewWork.h"
+ #include "ViewTransfers.h"
