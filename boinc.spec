@@ -13,18 +13,24 @@
 Summary:	BOINC - Berkeley Open Infrastructure for Network Computing
 Summary(pl):	BOINC - otwarta infrastruktura Berkeley do obliczeñ sieciowych
 Name:		boinc
-Version:	5.3.19
-Release:	0.1
+Version:	5.3.22
+Release:	0.2
 License:	GPL
 Group:		Applications
+# Source generated from:
+# cvs -d :pserver:anonymous:@alien.ssl.berkeley.edu:/home/cvs/cvsroot checkout -r boinc_core_release_5_3_22 boinc
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	96281927b4f4288db389d58fc548c83b
 Source1:	http://phileimer.9online.fr/%{name}-1.10.tar.bz2
 # Source1-md5:	85907bd0b9b3527ee90ee73ad2d4ea8d
 Patch0:		%{name}-include.patch
 Patch1:		%{name}-Makefile.am.patch
-Patch2:		%{name}-path.patch
-URL:		http://phileimer.9online.fr/
+Patch2:		%{name}-platform.patch
+#Patch for boinc script not used for now don't delete
+#Patch2:		%{name}-path.patch
+URL:		http://boinc.berkeley.edu/
+# URL for boinc script
+#URL:		http://phileimer.9online.fr/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	curl-devel
@@ -68,6 +74,7 @@ Network Computing).
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 mv clientgui/BOINCDial{u,U}pManager.h
 mv clientgui/BOINCDial{u,U}pManager.cpp
 
@@ -78,6 +85,9 @@ mv clientgui/BOINCDial{u,U}pManager.cpp
 %{__autoheader}
 %{__automake}
 %configure \
+%ifarch amd64
+	--with-boinc-platform=i686-pc-linux-gnu \
+%endif
 	--enable-static \
 	--enable-shared \
 	--with-x \
