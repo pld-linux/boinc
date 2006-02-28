@@ -27,7 +27,7 @@ Patch0:		%{name}-include.patch
 Patch1:		%{name}-Makefile.am.patch
 Patch2:		%{name}-platform.patch
 #Patch for boinc script not used for now don't delete
-#Patch2:		%{name}-path.patch
+#Patch2:	%{name}-path.patch
 URL:		http://boinc.berkeley.edu/
 # URL for boinc script
 #URL:		http://phileimer.9online.fr/
@@ -40,8 +40,8 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	mysql-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	wxWidgets-devel
 BuildRequires:	wxGTK2-devel
+BuildRequires:	wxWidgets-devel
 ExclusiveArch:	%{ix86} amd64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -93,7 +93,7 @@ mv clientgui/BOINCDial{u,U}pManager.cpp
 	--with-x \
 	--with-ssl \
 	--with-wx-config=/usr/bin/wx-gtk2-ansi-config
-	
+
 %{__make}
 
 #%{__make} \
