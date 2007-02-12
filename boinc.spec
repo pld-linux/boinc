@@ -11,7 +11,7 @@
 #	- wxGTK2-devel or wxGTK2-unicode-devel or wxGTK2-univ-devel or wxGTK2-univ-unicode-devel ??
 
 Summary:	BOINC - Berkeley Open Infrastructure for Network Computing
-Summary(pl.UTF-8):   BOINC - otwarta infrastruktura Berkeley do obliczeń sieciowych
+Summary(pl.UTF-8):	BOINC - otwarta infrastruktura Berkeley do obliczeń sieciowych
 Name:		boinc
 Version:	5.3.22
 Release:	0.2
@@ -56,7 +56,7 @@ komputerowych ochotników.
 
 %package script
 Summary:	boinc - a bash script used to manage boinc client
-Summary(pl.UTF-8):   boinc - napisany w bashu skrypt do zarządzania klientem boinc
+Summary(pl.UTF-8):	boinc - napisany w bashu skrypt do zarządzania klientem boinc
 Group:		Applications
 URL:		http://phileimer.9online.fr/
 
