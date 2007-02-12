@@ -11,7 +11,7 @@
 #	- wxGTK2-devel or wxGTK2-unicode-devel or wxGTK2-univ-devel or wxGTK2-univ-unicode-devel ??
 
 Summary:	BOINC - Berkeley Open Infrastructure for Network Computing
-Summary(pl):	BOINC - otwarta infrastruktura Berkeley do obliczeñ sieciowych
+Summary(pl.UTF-8):   BOINC - otwarta infrastruktura Berkeley do obliczeÅ„ sieciowych
 Name:		boinc
 Version:	5.3.22
 Release:	0.2
@@ -49,14 +49,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BOINC is a software platform for distributed computing using
 volunteered computer resources.
 
-%description -l pl
+%description -l pl.UTF-8
 BOINC (Berkeley Open Infrastructure for Network Computing) to
-platforma programowa do rozproszonych obliczeñ przy u¿yciu zasobów
-komputerowych ochotników.
+platforma programowa do rozproszonych obliczeÅ„ przy uÅ¼yciu zasobÃ³w
+komputerowych ochotnikÃ³w.
 
 %package script
 Summary:	boinc - a bash script used to manage boinc client
-Summary(pl):	boinc - napisany w bashu skrypt do zarz±dzania klientem boinc
+Summary(pl.UTF-8):   boinc - napisany w bashu skrypt do zarzÄ…dzania klientem boinc
 Group:		Applications
 URL:		http://phileimer.9online.fr/
 
@@ -65,9 +65,9 @@ boinc is a bash script for unix like systems used to manage client of
 the BOINC project (Berkeley Open Infrastructure for Network
 Computing).
 
-%description script -l pl
-boinc to napisany w bashu skrypt dla systemów uniksowych s³u¿±cy do
-zarz±dzania klientem projektu BOINC (Berkeley Open Infrastructure for
+%description script -l pl.UTF-8
+boinc to napisany w bashu skrypt dla systemÃ³w uniksowych sÅ‚uÅ¼Ä…cy do
+zarzÄ…dzania klientem projektu BOINC (Berkeley Open Infrastructure for
 Network Computing).
 
 %prep
