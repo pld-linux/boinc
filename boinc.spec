@@ -61,7 +61,7 @@ Group:		Applications
 URL:		http://phileimer.9online.fr/
 
 %description script
-boinc is a bash script for unix like systems used to manage client of
+boinc is a bash script for Unix like systems used to manage client of
 the BOINC project (Berkeley Open Infrastructure for Network
 Computing).
 
