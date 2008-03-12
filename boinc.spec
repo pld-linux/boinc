@@ -42,7 +42,7 @@ BuildRequires:	mysql-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	wxGTK2-devel
 BuildRequires:	wxWidgets-devel
-ExclusiveArch:	%{ix86} amd64
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -85,7 +85,7 @@ mv clientgui/BOINCDial{u,U}pManager.cpp
 %{__autoheader}
 %{__automake}
 %configure \
-%ifarch amd64
+%ifarch %{x8664}
 	--with-boinc-platform=i686-pc-linux-gnu \
 %endif
 	--enable-static \
@@ -96,21 +96,11 @@ mv clientgui/BOINCDial{u,U}pManager.cpp
 
 %{__make}
 
-#%{__make} \
-#	CFLAGS="%{rpmcflags}" \
-#	LDFLAGS="%{rpmldflags}"
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-#%%install
-#rm -rf $RPM_BUILD_ROOT
-#install -d $RPM_BUILD_ROOT%{_bindir}
-
-#install boinc $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
